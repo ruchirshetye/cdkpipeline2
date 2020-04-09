@@ -5,6 +5,7 @@ import * as codepipeline_actions from '@aws-cdk/aws-codepipeline-actions';
 import * as lambda from '@aws-cdk/aws-lambda';
 import * as s3 from '@aws-cdk/aws-s3';
 import { App, Stack, StackProps } from '@aws-cdk/core';
+import * as CDK from '@aws-cdk/core';
 
 export interface PipelineStackProps extends StackProps {
   readonly lambdaCode: lambda.CfnParametersCode;
@@ -81,7 +82,7 @@ export class PipelineStack extends Stack {
                 actionName: "GitHub_Source",
                 owner: "ruchirshetye",
                 repo: "cdkpipeline",
-                oauthToken: "9d228e1aa6c56e85a4fa417ecb7b657e11aa8058",
+                oauthToken: CDK.SecretValue.secretsManager('GitHubToken'),
                 output: sourceOutput,
                 trigger: codepipeline_actions.GitHubTrigger.WEBHOOK
               }),
