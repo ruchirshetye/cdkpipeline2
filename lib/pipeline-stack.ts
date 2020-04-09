@@ -81,7 +81,7 @@ export class PipelineStack extends Stack {
                 actionName: "GitHub_Source",
                 owner: "ruchirshetye",
                 repo: "cdkpipeline",
-                oauth_token: "9d228e1aa6c56e85a4fa417ecb7b657e11aa8058",
+                oauthToken: "9d228e1aa6c56e85a4fa417ecb7b657e11aa8058",
                 output: sourceOutput,
                 trigger: codepipeline_actions.GitHubTrigger.WEBHOOK
               }),
