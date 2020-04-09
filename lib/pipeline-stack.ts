@@ -48,7 +48,7 @@ export class PipelineStack extends Stack {
         phases: {
           install: {
             commands: [
-              'cd lambda',
+              'cd Lambda',
               'npm install',
             ],
           },
