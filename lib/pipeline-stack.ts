@@ -78,7 +78,7 @@ export class PipelineStack extends Stack {
           stageName: 'Source',
             actions: [
               new codepipeline_actions.GitHubSourceAction({
-                action_name: "GitHub_Source",
+                actionName: "GitHub_Source",
                 owner: "ruchirshetye",
                 repo: "cdkpipeline",
                 oauth_token: "9d228e1aa6c56e85a4fa417ecb7b657e11aa8058",
